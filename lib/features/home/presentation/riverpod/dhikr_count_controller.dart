@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final dhikrCounterProvider = NotifierProvider<DhikrCountController, int>(
-  DhikrCountController.new,
+  () => DhikrCountController() 
 );
 
 class DhikrCountController extends Notifier<int> {
