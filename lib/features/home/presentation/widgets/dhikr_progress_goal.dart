@@ -1,13 +1,14 @@
 import 'package:dhikr_sample/core/theme/colors.dart';
+import 'package:dhikr_sample/features/home/presentation/riverpod/dhikr_count_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class DhikrProgressWidget extends StatelessWidget {
-  const DhikrProgressWidget({
-    super.key,
-  });
+class DhikrProgressWidget extends ConsumerWidget {
+  const DhikrProgressWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final dhikrCount = ref.watch(dhikrCounterProvider);
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Row(
@@ -26,16 +27,13 @@ class DhikrProgressWidget extends StatelessWidget {
                 ),
               ),
               Text(
-                '24 / 33',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
+                '$dhikrCount / 33',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
             ],
           ),
           Text(
-            '72% COMPLETE',
+            '${((dhikrCount / 33) * 100).floor()}% COMPLETE',
             style: TextStyle(
               color: AppColors.darkTextSecondary,
               fontWeight: FontWeight.w800,

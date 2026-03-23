@@ -1,13 +1,20 @@
 import 'package:dhikr_sample/core/theme/colors.dart';
+import 'package:dhikr_sample/features/home/presentation/riverpod/dhikr_count_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class DhikrCountBox extends StatelessWidget {
+class DhikrCountBox extends ConsumerWidget {
   const DhikrCountBox({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final dhikrCounter = ref.watch(dhikrCounterProvider);
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        if (dhikrCounter < 33) {
+          ref.read(dhikrCounterProvider.notifier).incrementDhikrCount();
+        }
+      },
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.darkSurface,
@@ -57,7 +64,7 @@ class DhikrCountBox extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              '24',
+              dhikrCounter.toString(),
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
             ),
           ],
