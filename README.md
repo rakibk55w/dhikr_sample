@@ -5,7 +5,7 @@ A Flutter project to display simple counter using Riverpod state management.
 - [Installation versions](#installation-versions)
 - [Dependencies](#dependencies)
 - [Features](#features)
-  - [Counter/HomeScreen](#counter-homescreen)
+  - [Counter/HomeScreen](#counterhomescreen)
 - [Run The Project](#run-the-project)
   - [Prerequisites](#prerequisites)
 - [Architecture](#architecture)
