@@ -9,7 +9,7 @@ class GlobalCountBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 200,
+        width: 220,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
           border: Border.all(color: AppColors.darkContainerBorder),
@@ -25,6 +25,7 @@ class GlobalCountBox extends StatelessWidget {
               style: TextStyle(
                 fontSize: 14,
                 color: AppColors.darkTextSecondary,
+                letterSpacing: 1.2,
               ),
             ),
           ],
@@ -33,5 +34,3 @@ class GlobalCountBox extends StatelessWidget {
     );
   }
 }
-
-

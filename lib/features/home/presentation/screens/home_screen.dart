@@ -11,7 +11,25 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: GenericAppbar(),
       body: Column(
-        children: [GlobalCountBox()],
+        children: [
+          GlobalCountBox(),
+          SizedBox(height: 16),
+          Text(
+            '2,841,092',
+            style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 8),
+          Text(
+            'TOTAL RECITATION TODAY',
+            style: TextStyle(
+              fontSize: 16,
+              color: AppColors.darkTextSecondary,
+              fontWeight: FontWeight.w300,
+              letterSpacing: 4,
+            ),
+          ),
+          SizedBox(height: 32),
+        ],
       ),
     );
   }
