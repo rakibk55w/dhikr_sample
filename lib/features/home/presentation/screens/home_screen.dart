@@ -17,13 +17,19 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 16),
+
+            /// - Count how many people using this section
             GlobalCountBox(),
             SizedBox(height: 16),
+
+            /// - Count number (static number)
             Text(
               '2,841,092',
               style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
+
+            /// - Count explanation
             Text(
               'TOTAL RECITATION TODAY',
               style: TextStyle(
@@ -34,8 +40,12 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 64),
+
+            /// - Main interactable counter
             DhikrCountBox(),
             SizedBox(height: 64),
+
+            /// - Instruction for counter progress
             Text(
               'TAP TO RECITE',
               style: TextStyle(
@@ -46,8 +56,12 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
+
+            /// - Button to change count method (static)
             ChangeToVoiceBox(),
             SizedBox(height: 16),
+
+            /// - Progress display
             DhikrProgressWidget(),
           ],
         ),

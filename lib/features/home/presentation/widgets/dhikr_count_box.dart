@@ -8,10 +8,15 @@ class DhikrCountBox extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    /// - Observe the counter state for rebuild
     final dhikrCounter = ref.watch(dhikrCounterProvider);
+
     return GestureDetector(
+      /// - Detect user tap
       onTap: () {
+        /// - Check if counter has reached limit
         if (dhikrCounter < 33) {
+          /// - Increase counter
           ref.read(dhikrCounterProvider.notifier).incrementDhikrCount();
         }
       },
@@ -64,7 +69,7 @@ class DhikrCountBox extends ConsumerWidget {
             ),
             SizedBox(height: 8),
             Text(
-              dhikrCounter.toString(),
+              dhikrCounter.toString(), // tap count
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
             ),
           ],

@@ -18,8 +18,10 @@ class GlobalCountBox extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            /// - Online green dot
             OnlineIndicator(),
             SizedBox(width: 8),
+
             Text(
               'GLOBAL LIVE COUNT',
               style: TextStyle(

@@ -3,17 +3,19 @@ import 'package:dhikr_sample/features/home/presentation/riverpod/dhikr_count_con
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+/// - Customized appbar
 class GenericAppbar extends ConsumerWidget implements PreferredSizeWidget {
   const GenericAppbar({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return AppBar(
-      automaticallyImplyLeading: false,
+      automaticallyImplyLeading: false, // no back button
       actions: [
         IconButton(
-          icon: Icon(Icons.restore),
+          icon: Icon(Icons.restore), // reset button
           onPressed: () {
+            /// - Reset controller state
             ref.read(dhikrCounterProvider.notifier).resetDhikrCount();
           },
         ),
@@ -23,7 +25,10 @@ class GenericAppbar extends ConsumerWidget implements PreferredSizeWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            /// - Appbar title
             Text('Dhikr', style: TextStyle(fontSize: 24)),
+
+            /// - Appbar subtitle
             Text(
               'JOINED',
               style: TextStyle(
@@ -39,5 +44,5 @@ class GenericAppbar extends ConsumerWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(60);
+  Size get preferredSize => Size.fromHeight(60); // appbar height
 }

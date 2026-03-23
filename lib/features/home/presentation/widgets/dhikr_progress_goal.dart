@@ -8,7 +8,9 @@ class DhikrProgressWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    /// - Observe the counter state for rebuild
     final dhikrCount = ref.watch(dhikrCounterProvider);
+
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Row(
@@ -27,11 +29,13 @@ class DhikrProgressWidget extends ConsumerWidget {
                 ),
               ),
               Text(
-                '$dhikrCount / 33',
+                '$dhikrCount / 33', // tap count
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
             ],
           ),
+
+          /// - Show count progress in percentage
           Text(
             '${((dhikrCount / 33) * 100).floor()}% COMPLETE',
             style: TextStyle(
