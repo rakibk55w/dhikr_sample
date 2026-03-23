@@ -2,9 +2,7 @@ import 'package:dhikr_sample/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class ChangeToVoiceBox extends StatelessWidget {
-  const ChangeToVoiceBox({
-    super.key,
-  });
+  const ChangeToVoiceBox({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,7 @@ class ChangeToVoiceBox extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.recycling, size: 20),
+          Icon(Icons.import_export, size: 20),
           SizedBox(width: 8),
           Text(
             'CHANGE TO VOICE',

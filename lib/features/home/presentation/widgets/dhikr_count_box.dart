@@ -10,11 +10,23 @@ class DhikrCountBox extends StatelessWidget {
       onTap: () {},
       child: Container(
         decoration: BoxDecoration(
+          color: AppColors.darkSurface,
           border: Border.all(color: AppColors.darkContainerBorder, width: 2),
           shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.darkContainerBorder.withAlpha(
+                (255 * 0.4).toInt(),
+              ),
+              blurRadius: 220,
+              spreadRadius: 24,
+            ),
+          ],
         ),
         padding: EdgeInsets.all(64),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'سُبْحَانَ ٱللَّٰهِ',
