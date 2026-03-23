@@ -15,4 +15,5 @@ class AppColors {
   static const Color darkTextSecondary = Color(0xFFD2AF32); // gold text
   static const Color darkTextTertiary = Color(0xFF575757); // grey text
   static const Color darkContainerBorder = Color(0xFF26210E); // counter circle border
+  static const Color onlineColor = Color(0xFF0FB47D); // online dot color
 }
