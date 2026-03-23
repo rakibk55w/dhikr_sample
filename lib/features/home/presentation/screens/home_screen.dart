@@ -9,7 +9,27 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: GenericAppbar(),
-      body: const Placeholder(),
+      body: Column(
+        children: [
+          Container(
+            width: 250,
+            height: 40,
+            decoration: BoxDecoration(
+              border: Border.all(color: AppColors.darkContainerBorder),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Center(
+              child: Text(
+                'GLOBAL LIVE COUNT',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: AppColors.darkTextSecondary,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
