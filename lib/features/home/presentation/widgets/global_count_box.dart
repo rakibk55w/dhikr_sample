@@ -9,13 +9,13 @@ class GlobalCountBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 220,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
           border: Border.all(color: AppColors.darkContainerBorder),
           borderRadius: BorderRadius.circular(20),
         ),
         child: const Row(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             OnlineIndicator(),
